@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardHeader } from "@/components/ui/card";
+import causes from "../../../funds.json";
 
 export default function Causes() {
   return (
@@ -7,18 +8,12 @@ export default function Causes() {
       <Navbar />
       <main className="flex justify-center items-center">
         <div className="min-w-full grid grid-cols-1 md:grid-cols-3 gap-3">
-          <Card className="h-[10vh] w-[350px]">
-            <CardHeader>Cause 1</CardHeader>
-          </Card>
-          <Card className="h-[10vh] w-[350px]">
-            <CardHeader>Cause 2</CardHeader>
-          </Card>
-          <Card className="h-[10vh] w-[350px]">
-            <CardHeader>Cause 3</CardHeader>
-          </Card>
-          <Card className="h-[10vh] w-[350px]">
-            <CardHeader>Cause 4</CardHeader>
-          </Card>
+          {causes.map((cause, index) => (
+            <Card key={index} className="h-[10vh]">
+              <CardHeader>{cause.title}</CardHeader>
+              <p>{cause.description}</p>
+            </Card>
+          ))}
         </div>
       </main>
     </>

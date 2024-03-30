@@ -31,8 +31,7 @@ export default function Navbar() {
 
   return (
     <nav>
-      <div className="text-cyan-50">Hello</div>
-      <div>
+      <div className="flex justify-end p-4">
         {user.loggedIn ? <AuthenticatedState /> : <UnauthenticatedState />}
       </div>
     </nav>
