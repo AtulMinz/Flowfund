@@ -14,8 +14,8 @@ export default function Navbar() {
 
   const AuthenticatedState = () => {
     return (
-      <div className="text-white">
-        Address: {user?.addr ?? "No Address"}
+      <div>
+        <span className="text-white p-2">{user?.addr ?? "No Address"}</span>
         <Button onClick={fcl.unauthenticate}>LogOut</Button>
       </div>
     );
