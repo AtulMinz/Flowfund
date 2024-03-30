@@ -7,7 +7,7 @@ import * as fcl from "@onflow/fcl";
 import { ModeToggle } from "./theme-switcher";
 
 export default function Navbar() {
-  const [user, setUser] = React.useState({ loggedIn: null });
+  const [user, setUser] = React.useState({ addr: "", loggedIn: null });
 
   React.useEffect(() => {
     fcl.currentUser.subscribe(setUser);
