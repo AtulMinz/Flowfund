@@ -27,7 +27,7 @@ export default function Navbar() {
   const UnauthenticatedState = () => {
     return (
       <div>
-        <Button onClick={fcl.logIn}>Connect</Button>
+        <Button onClick={fcl.authenticate}>Connect</Button>
       </div>
     );
   };
