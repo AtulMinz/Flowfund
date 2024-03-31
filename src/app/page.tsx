@@ -12,8 +12,8 @@ export default function Home() {
         <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl text-gray-300">
           Welcome to Flowfund
         </h1>
-        <Button size={"lg"} onClick={() => router.push("/causes")}>
-          View Causes &rarr;
+        <Button size={"lg"} onClick={() => router.push("/campaigns")}>
+          View Campaigns &rarr;
         </Button>
       </div>
     </main>

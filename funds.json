@@ -1,32 +1,28 @@
 [
   {
     "title": "College Fees",
-    "description": "I want to raise funds for higher education please help me",
+    "description": "I want to raise funds for higher education please help me.",
     "image": "https://research.collegeboard.org/media/2022-02/iStock_000021255451_Large-780x585.jpg"
   },
   {
-    "title": "Medical Bill",
-    "description": "I want to raise money for my mothers operation",
+    "title": "Hey me pay Medical Bill",
+    "description": "I want to raise money for my mother's medical bill.",
     "image": "https://microbiozindia.com/wp-content/uploads/2020/03/AAW2.png"
   },
   {
-    "title": "Repay Loan",
-    "description": "I went complete broke",
-    "image": "https://assets-global.website-files.com/65d8fb6157ed35a0f446b127/65d8fb6157ed35a0f446b47f_howtosavemoneywhenyouarebroke.jpg"
+    "title": "Help me making a movie!!",
+    "description": "I am collecting funds for creating a documentary movie.",
+    "image": "https://static.archerdxp.io/cms/aa2725ca-5bbc-48de-b763-52ad8ac10d9b.jpg"
   },
+
   {
     "title": "Flood relief",
-    "description": "Our city have been flooded help us",
+    "description": "The funds collected will go to charity for flood relief.",
     "image": "https://cdn.who.int/media/images/default-source/health-and-climate-change/rescue-operation-haiti-flood-c-un-photo-marco-dormino.tmb-479v.jpg?sfvrsn=412ab270_4%20479w"
   },
   {
-    "title": "Flood relief",
-    "description": "Our city have been flooded help us",
-    "image": "https://cdn.who.int/media/images/default-source/health-and-climate-change/rescue-operation-haiti-flood-c-un-photo-marco-dormino.tmb-479v.jpg?sfvrsn=412ab270_4%20479w"
-  },
-  {
-    "title": "Flood relief",
-    "description": "Our city have been flooded help us",
-    "image": "https://cdn.who.int/media/images/default-source/health-and-climate-change/rescue-operation-haiti-flood-c-un-photo-marco-dormino.tmb-479v.jpg?sfvrsn=412ab270_4%20479w"
+    "title": "Buying a Laptop",
+    "description": "Help me buying a laptop. Currently I'm in college and ",
+    "image": "https://m.media-amazon.com/images/I/61Qe0euJJZL.jpg"
   }
 ]
