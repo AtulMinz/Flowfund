@@ -22,11 +22,12 @@
     }
   },
   "contracts": {
-    "Main": "./contract/contract.cdc"
+    "Hello": "./cadence/contracts/Hello.cdc",
+    "Payfund": "./cadence/contracts/Payfund.cdc"
   },
   "deployments": {
     "testnet": {
-      "my-testnet": ["Main"]
+      "my-testnet": ["Hello", "Payfund"]
     }
   }
 }
