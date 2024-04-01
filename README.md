@@ -9,7 +9,7 @@ To checkout: [Flowfund](https://flowfund.vercel.app/)
 To locally setup this website:
 
 - Clone it.
-- And simply run these following command:
+- And simply run this following command:
 `
 npm install
 `
