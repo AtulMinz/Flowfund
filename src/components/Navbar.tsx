@@ -19,7 +19,7 @@ export default function Navbar() {
         <span className="leading-7 [&:not(:first-child)]:mt-6 p-1">
           {user?.addr ?? "No Address"}
         </span>
-        <Button onClick={fcl.unauthenticate}>LogOut</Button>
+        <Button onClick={fcl.unauthenticate}>Logout</Button>
       </div>
     );
   };
