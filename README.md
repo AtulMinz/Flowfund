@@ -4,7 +4,7 @@
 
 Flowfund is a crowdfunding website based on Flow blockchain, where users can fund a campaigns using Flow tokens.
 
-To checkout: [Flowfund](https://flowfund.vercel.app/)
+To checkout visit: [Flowfund](https://flowfund.vercel.app/)
 
 To locally setup this website:
 
