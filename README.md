@@ -8,7 +8,7 @@ To checkout visit: [Flowfund](https://flowfund.vercel.app/)
 
 To setup locally (WSL recommended):
 
--- Requirements:
+- Requirements:
   `Flow CLI and Node.js`
   
 - Clone it.
