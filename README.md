@@ -6,8 +6,11 @@ Flowfund is a crowdfunding website based on Flow blockchain, where users can fun
 
 To checkout visit: [Flowfund](https://flowfund.vercel.app/)
 
-To locally setup this website:
+To setup locally (WSL recommended):
 
+- Requirements:
+  `Flow CLI and Node.js`
+  
 - Clone it.
 - And simply run this following command:
 `
