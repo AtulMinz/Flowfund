@@ -1,6 +1,6 @@
 ## Flowfund
 
-## _MLH Web3Apps 2024 winner_
+## _MLH Web3Apps 2024-03 winner_
 
 Flowfund is a crowdfunding website based on Flow blockchain, where users can fund a campaigns using Flow tokens.
 
