@@ -27,22 +27,36 @@ import * as fcl from "@onflow/fcl";
 import toast from "react-hot-toast";
 
 export default function Causes() {
-  const transactionFund = async (deposit) => {
-    const transactionId = await fcl.mutate({
-      cadence: `
-      import Payfund from 0x0311f7cb910e8830
-      transaction(deposit: String) {
+  const [value, setValue] = React.useState();
+
+  const transactionFund = async (toAddress: string, amount: string) => {
+    const cadence = `
+    import FungibleToken from 0x9a0766d93b6608b7
+    import FlowToken from 0x7e60df042a9c0868
+      transaction(recipient: Address, amount: UFix64) {
         prepare(signer: AuthAccount) {
-        }
-  
-        execute {
-          Payfund.payflow(deposits: deposit)
-          log("Done!")
+          let sender = signer.borrow<&FlowToken.Vault>(from: /storage/flowTokenVault)
+          ?? panic("Could not borrow Provider reference to the Vault")
+
+          let receiverAccount = getAccount(recipient)
+
+          let receiver = receiverAccount.getCapability(/public/flowTokenReceiver)
+          .borrow<&FlowToken.Vault{FungibleToken.Receiver}>()
+          ??panic("Could not borrow Receiver reference to the Vault")
+
+          let tempVault <- sender.withdraw(amount: amount)
+          receiver.deposit(from: <- tempVault)
         }
       }
-      `,
+    `;
 
-      args: (arg, t) => [arg(deposit, t.String)],
+    const transactionId = await fcl.mutate({
+      cadence,
+      limit: 9999,
+      args: (arg, t) => [
+        arg(toAddress, t.Address),
+        arg(Number.parseFloat(amount).toFixed(2), t.UFix64),
+      ],
       payer: fcl.authz,
       proposer: fcl.authz,
       authorizations: [fcl.authz],
@@ -85,13 +99,18 @@ export default function Causes() {
                             type="number"
                             placeholder="Flow quantity"
                             className="col-span-3"
+                            onChange={(e) => {
+                              setValue(e.target.value);
+                            }}
                           />
                         </div>
                       </div>
                       <DialogFooter>
                         <Button
                           variant="destructive"
-                          onClick={() => transactionFund("0xad537ac6daff46c1")}
+                          onClick={() =>
+                            transactionFund("0xad537ac6daff46c1", value)
+                          }
                         >
                           Pay
                         </Button>
